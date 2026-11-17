@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UWorld MCAT – Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-row">
+        <!-- Official logo: put the file at static/img/uworld-logo.png (hidden automatically if the file is missing) -->
+        <img class="brand-logo" src="/static/img/images-removebg-preview.png" alt="" onerror="this.remove()">
+        <div class="brand-mark">UWorld</div>
+      </div>
+      <div class="brand-sub">MCAT · General Chemistry</div>
+    </div>
+    <nav class="nav">
+      <a href="#/planner" data-nav="planner">Study Planner</a>
+      <a href="#/create" data-nav="create">Create Test</a>
+      <a href="#/tests" data-nav="tests">Previous Tests</a>
+      <a href="#/lectures" data-nav="lectures">Lectures</a>
+      <a href="#/etextbook" data-nav="etextbook">E-textbook</a>
+    </nav>
+    <div class="sidebar-foot">
+      <button class="reset-btn" id="resetBtn" type="button">Reset my data</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar" id="topbar">
+      <h1 id="pageTitle">Study Planner</h1>
+      <div class="topbar-right">
+        <button class="bell" id="bellBtn" type="button" aria-label="Reminders" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          <span class="bell-count" id="bellCount" hidden>0</span>
+        </button>
+        <div class="bell-panel" id="bellPanel" hidden></div>
+      </div>
+    </header>
+    <main class="content" id="view"></main>
+  </div>
+</div>
+
+<div id="modalRoot"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
